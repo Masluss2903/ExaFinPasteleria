@@ -1,0 +1,152 @@
+Para entregar Lunes, Noviembre 11, 11:59AM
+
+Romualdo es el dueño de una pasteleria y tambien el cocinero principal. A el le gusta experimentar con sus recetas en busqueda del mejor sabor, pero a veces pierde el hilo de los cambios que ha hecho. Romualdo decidio intentar con un manejador de versiones para solucionarlo y ha elegido GIT.
+
+	- Guardar la version original de las recetas de los pasteles: Chocolate, Tres leches, Zanahoria, Pay de queso, Pay de limon
+	- Crear un repositorio en GitHUB para almacenar las recetas en la nube
+	- Subir la version original de las recetas
+
+Ahora que las recetas originales estan a salvo Romualdo puede seguir con sus experimentos.
+
+	- Modificar la receta del pay de queso (agregar "mas queso")
+	- Publicar el cambio
+	- Modificar la receta de nuevo ("no tanto")
+	- Publicar el cambio
+
+Para la temporade de Dia de gracias la pasteleria de Romualdo esta lanzando una promocion de temporada que incluye "Pay de manzana" y "Salsa de arandanos"
+
+	- Crear receta para el Pay de manzana
+	- Crear receta para la Salsa de arandanos
+	- Publicar cambio
+	- Editar receta de pay de manzana "mas tiempo en el horno para corteza crujiente"
+	- Publicar cambio
+
+Debido al exito de la promocion las ventas en el Pay de limon han bajado un poco, asi que por la duracion de la temporada Romualdo decidio no mantener el Pay de limon en la lista publica, pero no quiere borrar la receta ya que siempre a sido un clasico y uno de sus mejores productos. 
+
+	- Sin eliminar la receta original, dejar de darle seguimiento a la receta del Pay de limon
+
+maslu@DESKTOP-203O5VT MINGW64 ~/Documents/ZAPOPAN ACADEMY/HERRAMIENTAS/Pasteleria Romualdo 2 (master)
+$ git rm --cached 'Pay de Limon.txt'
+rm 'Pay de Limon.txt'
+
+maslu@DESKTOP-203O5VT MINGW64 ~/Documents/ZAPOPAN ACADEMY/HERRAMIENTAS/Pasteleria Romualdo 2 (master)
+$ git commit -m "Deja de seguir Pay de Limon"
+[master 6a40bb1] Deja de seguir Pay de Limon
+ 1 file changed, 20 deletions(-)
+ delete mode 100644 Pay de Limon.txt
+
+maslu@DESKTOP-203O5VT MINGW64 ~/Documents/ZAPOPAN ACADEMY/HERRAMIENTAS/Pasteleria Romualdo 2 (master)
+$ git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+maslu@DESKTOP-203O5VT MINGW64 ~/Documents/ZAPOPAN ACADEMY/HERRAMIENTAS/Pasteleria Romualdo 2 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Pay de Limon.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+Copiar las siguientes preguntas a un archivo llamado "examen" y contestarlas con sus palabras.
+
+	Nombre: Marlen Montserrat Luna
+	Grupo:Matutino 1
+	Fecha: 9/11/19
+	
+	GIT
+	
+	1.Cual es la diferencia entre git y GitHUB?
+
+	R: GIT es un controlador de versiones "VCS", con el que pudes revisar 
+	o simplemente ver el historial de un proyecto en el que estas trabajando y 
+	GITHUB es la plataforma de "hosting" de los proyectos, donde las personas comparten y desarrollan 
+	usando la herramienta GIT. 
+
+	2.En cuantos y cuales estados puede estar un archivo? 
+
+	R: Modified: es cuando modificas el archivo.
+	Staged: es cuando lo agregas a los cambios que vas a hacer en el commit en GIT
+	and Committed: Cuando le dices a GIT que ahora si realice los cambios 
+	y te de la nueva versión, ademas de agregar un mensaje para que quede documentado que hiciste. 
+
+	3.Para que sirve el comando "git add ." ? 
+
+	R: Para agregar todo los cambios que tenemos en moddified a staged.
+
+	4.Cuales son los 4 datos mas relevantes a la hora de hacer un commit?
+	Fecha
+	Mensaje
+	Checksum
+	Autor
+
+	5.Cual es el comando para crear una rama en mi repositorio?
+
+	R: git checkout -b "Nombre_de_la_rama"
+
+	JIRA
+	
+	1.Defina lo que es un issue:
+
+	R:Un issue es una tarea a realizar, es decir el trabajo que tenemos que hacer por ejemplo "Crear login de la app".
+
+	2.En kanban y scrum, cuales son las columnas default de un tablero?
+
+	R: ToDo , Inprogress and Done
+
+	Como se selecciona un Dashboard para mostrarse en la pantalla de bienvenida?
+	
+	R: Una vez que se tenga creado uno propio solo se va a Dashboard, al seleccionar saldra un menu desplegable 
+	y vendran todos los que tu has cread, solo seleccionas el que quieres utilizar. 
+	
+	Si tu no creaste el dashboard y alguien lo compartio o tu lo quieres buscar entonces
+	se va a Dashboard-Manage Dashboard- Popular o Search y seleccionas o buscas el que quieres.
+
+	Jenkins
+	
+	Cual es el atajo (ruta relativa) para el directorio home de un usuario de ubuntu?
+	
+	R: cd ~
+
+	Como se installa Jenkins en un sistema linux?
+	
+	R:  
+   	54  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+   	55  sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+   	56  ls
+   	57  sudo apt-get update
+   	58  cd
+   	59  sudo apt-get install jenkins
+   	60  sudo service jenkins start
+   	61  cat /var/lib/jenkins/secrets/initialAdminPassword
+   	62  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   	63  pwd
+   	64  cd /var/lib/jenkins/workspace/Proyecto\ LibreGit/target/
+   	65  pwd
+   	66  ls
+   	67  history | grep java
+   	68  java -cp my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+   	69  java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+   	70  java -cp my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+
+	Cual es la relacion entre Hudson y Jenkins? 
+	R= Hudson era la primera version de jenkins, 
+	solo que Hudson al principio era codigo libre despues la compro Oracle y
+	hicieron privada entonces comenzaron a cobrar por el servicio, sin embargo los que 
+	defendian el código libre realizaron su propio fork y comenzaron con Jenkins y de 
+	es donde nace Jenkins que es libre.  
+
+
+Incluir el archivo de "examen" en el repositorio de la pasteleria de Romualdo.
+
+Enviar un correo con la URL del repositorio a tchavez00@hotmail.com
+
+
+
